@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".ProfileActivity">
+
+
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Update Profile"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/signup_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logo"
+        android:textColor="@color/main_green" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/bg_email_address"
+        android:drawableEnd="@drawable/baseline_alternate_email_24"
+        android:drawablePadding="25dp"
+        android:drawableTint="@color/main_green"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/main_full_light" />
+
+    <EditText
+        android:id="@+id/edt_fullname"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edt_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_email_address"
+        android:drawableEnd="@drawable/baseline_account_circle_24"
+        android:drawableTint="@color/main_green"
+        android:hint="FullName"
+        android:inputType="textPersonName"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/main_full_light" />
+
+    <EditText
+        android:id="@+id/edt_gender"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edt_fullname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_email_address"
+        android:drawableEnd="@drawable/baseline_male_24"
+        android:drawableTint="@color/main_green"
+        android:hint="Gender"
+        android:inputType="textAutoCorrect"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/main_full_light" />
+
+    <EditText
+        android:id="@+id/edt_dob"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edt_gender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_email_address"
+        android:drawableEnd="@drawable/baseline_date_range_24"
+        android:drawableTint="@color/main_green"
+        android:hint="dd/mm/yy"
+        android:inputType="text|date"
+        android:paddingStart="25dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/main_full_light" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Next_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_dob"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_login_bg"
+        android:text="Next"
+        app:backgroundTint="@color/main_green" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
