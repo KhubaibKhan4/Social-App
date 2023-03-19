@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.nav_logout:
+                mAuth.signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
                 return true;
             default:
@@ -102,15 +104,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
-    protected void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            return;
-        } else {
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        }
+    public void onBackPressed() {
+        super.onBackPressed();
     }
+
 }
