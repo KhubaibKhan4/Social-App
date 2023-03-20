@@ -2,6 +2,7 @@ package com.codespacepro.loginappfirebase.Models;
 
 public class Users {
     String username, fullname, email, password, gender, dob;
+    String profile;
 
     public Users(String username, String fullname, String email, String password, String gender, String dob) {
         this.username = username;
@@ -10,6 +11,16 @@ public class Users {
         this.password = password;
         this.gender = gender;
         this.dob = dob;
+    }
+
+    public Users(String username, String fullname, String email, String password, String gender, String dob, String profile) {
+        this.username = username;
+        this.fullname = fullname;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
+        this.dob = dob;
+        this.profile = profile;
     }
 
     public Users() {
@@ -66,5 +77,13 @@ public class Users {
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 }

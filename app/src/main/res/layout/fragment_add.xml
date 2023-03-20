@@ -1,17 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/main"
     tools:context=".Fragments.AddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/posts_txt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Add"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Add Posts"
+        android:textColor="@color/white"
         android:textSize="22sp" />
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_posts"
+        android:layout_width="360dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
+
+        <EditText
+            android:id="@+id/post_desc"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Posts Headline" />
+
+        <ImageView
+            android:layout_width="340dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            android:id="@+id/post_image"
+            android:background="@drawable/bg_logout_btn"
+            android:scaleType="centerCrop"
+            android:src="@drawable/posts_placeholder" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/publishPostsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview_posts"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_login_bg"
+        android:text="Publish Now"
+        app:backgroundTint="@color/main_green" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/publishPostsBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cancelPosts"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_login_bg"
+        android:text="Cancel"
+        app:backgroundTint="@color/main_full_light" />
+
+    <ImageView
+        android:id="@+id/backFromPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:tint="@color/main_green" />
+
+</RelativeLayout>
